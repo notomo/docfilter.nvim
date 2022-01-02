@@ -1,0 +1,25 @@
+*docfilter.nvim.txt*
+
+==============================================================================
+Lua module: docfilter                               *docfilter.nvim-docfilter*
+
+open({resouce}, {opts})                                     *docfilter.open()*
+  Open a buffer with conveted resouce.
+
+  Parameters: ~
+    {resouce} (string) url or file path
+    {opts} (table|nil) 
+
+  Return: ~
+    (table) Promise
+
+==============================================================================
+EXAMPLES                                             *docfilter.nvim-EXAMPLES*
+
+>
+  " Open url or file path under the cursor.
+  nnoremap <Space>O <Cmd>lua require("docfilter").open(vim.fn.expand("<cWORD>>"))<CR>
+<
+
+==============================================================================
+vim:tw=78:ts=8:ft=help
