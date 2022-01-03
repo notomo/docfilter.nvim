@@ -13,6 +13,9 @@ OpenOption.default = {
   open = function(bufnr)
     vim.cmd([[tabedit | buffer ]] .. bufnr)
   end,
+  get_columns = function()
+    return vim.o.columns - 10
+  end,
 }
 
 function OpenOption.new(raw_opts)

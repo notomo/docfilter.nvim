@@ -13,7 +13,7 @@ function Document.open(resouce, opts)
     opts.pandoc,
     "--from=" .. opts.from,
     "--to=" .. opts.to,
-    "--columns=" .. tostring(vim.o.columns - 10),
+    "--columns=" .. opts.get_columns(),
   }
   for _, module_path in ipairs(opts.filters) do
     local path, err = modulelib.to_path("lua/docfilter/filter/" .. module_path)
