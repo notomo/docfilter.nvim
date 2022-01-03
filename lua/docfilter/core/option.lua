@@ -8,7 +8,7 @@ OpenOption.default = {
   pandoc = "pandoc",
   from = "html",
   to = "markdown",
-  filters = { "default.lua" },
+  filters = { "default" },
   filetype = "markdown",
   open = function(bufnr)
     vim.cmd([[tabedit | buffer ]] .. bufnr)
