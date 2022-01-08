@@ -13,6 +13,15 @@ open({resouce}, {opts})                                     *docfilter.open()*
   Return: ~
     (table) Promise
 
+navigate({opts})                                        *docfilter.navigate()*
+  Navigate to resouce in docfilter buffer.
+
+  Parameters: ~
+    {opts} (table|nil) 
+
+  Return: ~
+    (table) Promise
+
 ==============================================================================
 EXAMPLES                                             *docfilter.nvim-EXAMPLES*
 

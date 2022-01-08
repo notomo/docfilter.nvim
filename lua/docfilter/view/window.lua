@@ -10,6 +10,7 @@ function Window.open(resource, open, filetype)
   vim.bo[bufnr].modifiable = false
   vim.bo[bufnr].filetype = filetype
   vim.bo[bufnr].bufhidden = "wipe"
+  -- TODO: set buffer name
 
   open(bufnr)
 

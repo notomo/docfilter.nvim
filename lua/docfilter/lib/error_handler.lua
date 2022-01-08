@@ -19,11 +19,11 @@ function ErrorHandler.for_return_promise()
       messagelib.error(result)
       return Promise.resolve()
     elseif result then
-      return result:catch(function(err)
+      return Promise.resolve(result):catch(function(err)
         return messagelib.warn(err)
       end)
     end
-    return result
+    return Promise.resolve(result)
   end)
 end
 
