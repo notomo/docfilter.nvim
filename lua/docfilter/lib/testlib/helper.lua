@@ -10,10 +10,9 @@ function helper.before_each()
 end
 
 function helper.after_each()
+  helper.cleanup()
   helper.cleanup_loaded_modules(plugin_name)
   vim.fn.delete(helper.root .. "/spec/test_data", "rf")
-  vim.cmd("comclear")
-  vim.cmd("messages clear")
   vim.cmd([[lua collectgarbage("collect")]])
 end
 
