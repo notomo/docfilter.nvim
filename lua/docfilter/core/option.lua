@@ -11,7 +11,8 @@ OpenOption.default = {
   filters = { "default" },
   filetype = "markdown",
   open = function(bufnr)
-    vim.cmd([[tabedit | buffer ]] .. bufnr)
+    vim.cmd.tabedit()
+    vim.cmd.buffer({ count = bufnr })
   end,
   get_columns = function()
     return vim.o.columns - 10

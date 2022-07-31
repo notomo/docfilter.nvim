@@ -2,7 +2,7 @@ local example_path = "./spec/lua/docfilter/example.vim"
 local util = require("genvdoc.util")
 
 vim.o.runtimepath = vim.fn.getcwd() .. "," .. vim.o.runtimepath
-vim.cmd([[source ]] .. example_path)
+vim.cmd.source(example_path)
 
 require("genvdoc").generate("docfilter.nvim", {
   sources = { { name = "lua", pattern = "lua/docfilter/init.lua" } },

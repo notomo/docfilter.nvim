@@ -13,7 +13,7 @@ function helper.after_each()
   helper.cleanup()
   helper.cleanup_loaded_modules(plugin_name)
   vim.fn.delete(helper.root .. "/spec/test_data", "rf")
-  vim.cmd([[lua collectgarbage("collect")]])
+  collectgarbage("collect")
 end
 
 function helper.new_file(path, ...)
